@@ -10,11 +10,22 @@
 # See Cargo.toml.orig for the original contents.
 
 [package]
-edition = "2021"
+edition = "2018"
 name = "rocket-animation"
 version = "0.1.0"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Shota Isoda <shotaisoda0616@gmail.com>"]
 build = false
+exclude = [
+    "/target",
+    "*.lock",
+    "*.json",
+    "*.md",
+    "*.yml",
+    "*.toml",
+    "/docker-compose.yml",
+    "/Dockerfile",
+    "/README.md",
+]
 autobins = false
 autoexamples = false
 autotests = false
