@@ -1,12 +1,24 @@
 [package]
 name = "rocket-animation"
 version = "0.1.0"
-edition = "2021"
+edition = "2018"
 
 # プロジェクトの説明（任意）
 description = "A simple CLI tool to display a rocket launch animation"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Shota Isoda <shotaisoda0616@gmail.com>"]
 license = "MIT"
+
+exclude = [
+    "/target",
+    "*.lock",
+    "*.json",
+    "*.md",
+    "*.yml",
+    "*.toml",
+    "/docker-compose.yml",
+    "/Dockerfile",
+    "/README.md"
+]
 
 # 実行ファイル名（デフォルトはプロジェクト名）
 [[bin]]

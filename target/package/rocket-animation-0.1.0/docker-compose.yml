@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  rocket-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app  # ホストのコードをコンテナにマウント
+      - cargo-cache:/usr/local/cargo/registry  # cargoキャッシュをボリュームに保存
+    ports:
+      - "8080:8080"  # 必要に応じてアプリケーションのポートを公開
+    stdin_open: true
+    tty: true
+
+volumes:
+  cargo-cache:

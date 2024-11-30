@@ -1,0 +1,22 @@
+[package]
+name = "rocket-animation"
+version = "0.1.0"
+edition = "2021"
+
+# プロジェクトの説明（任意）
+description = "A simple CLI tool to display a rocket launch animation"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+
+# 実行ファイル名（デフォルトはプロジェクト名）
+[[bin]]
+name = "rocket"
+path = "src/main.rs"
+
+[dependencies]
+# ターミナル操作用のクレート
+crossterm = "0.27.0"
+termion = "1.5"
+
+# アニメーションのためにスリープを使用
+tokio = { version = "1", features = ["full"] }
