@@ -5,7 +5,7 @@ edition = "2018"
 
 # プロジェクトの説明（任意）
 description = "A simple CLI tool to display a rocket launch animation"
-authors = ["Shota Isoda <shotaisoda0616@gmail.com>"]
+authors = ["Shota Isoda"]
 license = "MIT"
 
 exclude = [
@@ -33,13 +33,13 @@ termion = "1.5"
 # アニメーションのためにスリープを使用
 tokio = { version = "1", features = ["full"] }
 
-[package.metadata.rpm]
-package = "rocket-animation"
+
+[package.metadata.deb]
 name = "rocket-animation"
-version = "0.1.0"
-release = "1%{?dist}"
-summary = "A simple CLI tool to display a rocket launch animation"
-license = "MIT"
+
+
+[package.metadata.rpm]
+name = "rocket-animation"          # パッケージ名
 
 [package.metadata.rpm.cargo]
 buildflags = ["--release"]
